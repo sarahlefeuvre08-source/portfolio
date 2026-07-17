@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sarah Lefeuvre | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <a class="brand" href="index.html" aria-label="Sarah Lefeuvre portfolio home">
+        Sarah Lefeuvre | Portfolio
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="#projects">Projects</a>
+        <a href="https://drive.google.com/file/d/1zGYjL9DgbPEQwy_YfjC55qT8Mnp_RG1S/view?usp=drive_link" target="_blank" rel="noopener noreferrer">CV</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="intro-title">
+        <div class="hero-inner">
+          <h1 id="intro-title">Hi, I’m <strong>Sarah</strong> <span class="spinning-emoji" aria-hidden="true">🌸</span></h1>
+          <p>
+            Designing digital experiences that feel effortless.
+            <strong>Product Designer (UX/UI)</strong> focused on creating intuitive
+            solutions for real people.
+          </p>
+
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button button-primary" href="#projects">Projects</a>
+            <a class="button button-secondary" href="contact.html">Connect</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects" id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title" class="visually-hidden">Featured projects</h2>
+
+        <article class="project-card">
+          <a href="projects/lory.html" aria-label="View Lory project">
+            <img class="project-image-lory" src="assets/lory-project.png" alt="Mobile screens from the Lory language-learning app" />
+            <h3><strong>Lory</strong> — Redesigning a language-learning app for 20K+ users</h3>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="projects/poppi.html" aria-label="View Poppi project">
+            <img src="assets/poppi-project.png" alt="Mobile screens from the Poppi movie discovery app" />
+            <h3><strong>Poppi</strong> — Designing a movie discovery app that reduces decision fatigue</h3>
+          </a>
+        </article>
+
+        <article class="project-card">
+          <a href="projects/lingraft.html" aria-label="View Lingraft project">
+            <img class="project-image-lingraft" src="assets/lingraft-project.png" alt="Mobile screens from the Lingraft language-learning app" />
+            <h3><strong>Lingraft</strong> — Designing a language-learning app built for focused study</h3>
+            <p class="project-status">⏱️ Coming Soon</p>
+          </a>
+        </article>
+      </section>
+    </main>
+
+    <button class="back-to-top" type="button" aria-label="Back to top">
+      <span aria-hidden="true"></span>
+    </button>
+
+    <footer class="site-footer">Designed by Sarah Lefeuvre, 2026</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
