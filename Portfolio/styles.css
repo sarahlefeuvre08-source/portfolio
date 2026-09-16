@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&display=swap");
 
+@font-face {
+  font-family: "Boiled Pasta";
+  src: url("assets/fonts/boiled-pasta.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
 :root {
   --page-bg: #F8F8F8;
   --text: #1E1E1E;
@@ -27,6 +35,17 @@ body {
   line-height: 1.2;
 }
 
+.home-page {
+  background: #6F4E37;
+  color: #FFFAF3;
+}
+
+.home-page .site-nav a:hover,
+.home-page .site-nav a:focus-visible,
+.home-page .site-footer {
+  color: #FFFAF3;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -38,9 +57,9 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding: 23px 23px;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 700;
-  font-size: 16px;
+  font-family: "Boiled Pasta", "Courier New", Courier, monospace;
+  font-weight: 400;
+  font-size: 18pt;
 }
 
 .brand {
@@ -53,8 +72,14 @@ a {
   gap: 29px;
 }
 
-.site-nav a {
-  transition: color 160ms ease;
+.site-header a {
+  transition: color 160ms ease, opacity 160ms ease, transform 160ms ease;
+}
+
+.site-header a:hover,
+.site-header a:focus-visible {
+  opacity: 0.72;
+  transform: translateY(-1px);
 }
 
 .site-nav a:hover,
@@ -65,36 +90,62 @@ a {
 .hero {
   display: flex;
   align-items: center;
-  min-height: calc(100vh - 70px);
-  padding: 0 24px;
+  min-height: auto;
+  padding: 64px 24px 40px;
 }
 
 .hero-inner {
   width: min(var(--max-width), calc(100% - 130px));
   margin-left: 106px;
   margin-right: auto;
-  transform: translateY(-32px);
 }
 
 .hero h1 {
   margin: 0 0 21px;
-  font-size: 36pt;
+  font-size: 24pt;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.05;
 }
 
 .hero h1 strong {
+  position: relative;
+  display: inline-block;
+  padding: 4px 6px;
+  border-radius: 3px;
+  background: rgba(255, 250, 243, 0.8);
+  color: #473325;
   font-weight: 700;
 }
 
-.spinning-emoji {
-  display: inline-block;
-  transform-origin: center;
+.hero h1 strong::before,
+.hero h1 strong::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  border-radius: 999px;
+  background: #FFFAF3;
 }
 
-.spinning-emoji:hover {
-  animation: emoji-spin 700ms ease-in-out;
+.hero h1 strong::before {
+  left: -4.25px;
+  box-shadow: 0 0 0 2px #FFFAF3, 0 100% 0 2px #FFFAF3;
+}
+
+.hero h1 strong::after {
+  right: -4.25px;
+  box-shadow: 0 0 0 2px #FFFAF3, 0 100% 0 2px #FFFAF3;
+}
+
+.teddy-wave-emoji {
+  display: inline-block;
+  transform-origin: 72% 78%;
+}
+
+.teddy-wave-emoji:hover {
+  animation: teddy-wave 650ms ease-in-out;
 }
 
 .twitch-emoji {
@@ -115,13 +166,22 @@ a {
   animation: emoji-flip 500ms ease-in-out;
 }
 
-@keyframes emoji-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes teddy-wave {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
   }
 
-  to {
-    transform: rotate(360deg);
+  25% {
+    transform: translateY(-2px) rotate(-10deg);
+  }
+
+  50% {
+    transform: translateY(-4px) rotate(8deg);
+  }
+
+  75% {
+    transform: translateY(-2px) rotate(-6deg);
   }
 }
 
@@ -160,9 +220,9 @@ a {
 }
 
 .hero p {
-  max-width: 970px;
+  max-width: 520px;
   margin: 0;
-  font-size: 32pt;
+  font-size: 16pt;
   font-weight: 400;
   line-height: 1.12;
   letter-spacing: 0;
@@ -176,7 +236,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin-top: 40px;
+  margin-top: 24px;
 }
 
 .button {
@@ -216,15 +276,189 @@ a {
 }
 
 .projects {
-  width: min(1500px, calc(100% - 160px));
+  width: min(840px, calc(100% - 160px));
   margin: 0 auto 119px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 54px;
+  grid-template-columns: repeat(3, 248px);
+  column-gap: 48px;
+  row-gap: 64px;
+  justify-content: center;
+  justify-items: center;
+  transform: translateY(52px);
+}
+
+.project-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 248px;
+  height: 248px;
+  padding: 28px;
+  border: 0;
+  border-radius: 50%;
+}
+
+.circle-label {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 280px;
+  height: 300px;
+  overflow: visible;
+  pointer-events: none;
+  transform: translateX(-50%);
+  transform-box: view-box;
+  transform-origin: 50% 124px;
+}
+
+.project-card:hover .circle-label,
+.project-card:focus-within .circle-label {
+  animation: bubble-ring-turn 10s linear infinite;
+}
+
+@keyframes bubble-ring-turn {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+
+.circle-label path {
+  fill: none;
+  stroke: none;
+}
+
+.circle-label .bubble-outline {
+  stroke: #B98A63;
+  stroke-width: 1px;
+  stroke-dasharray: 10 8;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+}
+
+.circle-label text {
+  fill: #FFFAF3;
+  font-family: "Boiled Pasta", "Courier New", Courier, monospace;
+  font-size: 12pt;
+  font-weight: 400;
+  letter-spacing: 0;
+  text-anchor: middle;
+}
+
+.home-page .project-card {
+  background: #FFFAF1;
+  color: #473325;
+}
+
+.home-page .project-status {
+  color: #6F4E37;
+}
+
+.home-page .project-card a:hover h3,
+.home-page .project-card a:focus-visible h3,
+.home-page .project-card a:hover .project-status,
+.home-page .project-card a:focus-visible .project-status {
+  color: #8A6246;
 }
 
 .project-card a {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-card-character a {
+  position: absolute;
+  inset: 0;
+}
+
+.project-card-logo a {
+  position: absolute;
+  inset: 0;
+}
+
+.project-card .bubble-character {
+  width: 100%;
+  height: auto;
+  max-width: none;
+  margin-top: auto;
+  margin-bottom: -22px;
+  aspect-ratio: auto;
+  border-radius: 0;
+  background: transparent;
+  object-fit: contain;
+  transition: opacity 220ms ease;
+}
+
+.project-card .bubble-character-poppi {
+  width: 155%;
+  margin-bottom: -50px;
+}
+
+.project-card .bubble-character-bird {
+  width: 88%;
+}
+
+.project-card .bubble-logo {
+  width: 76%;
+  height: auto;
+  aspect-ratio: auto;
+  border-radius: 0;
+  background: transparent;
+  object-fit: contain;
+}
+
+.bubble-hover-copy {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  margin: 0;
+  padding: 32px;
+  background: #FFFAF1;
+  color: #473325;
+  font-size: 16pt;
+  font-weight: 500;
+  line-height: 1.12;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 220ms ease;
+}
+
+.project-card-logo .bubble-hover-copy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translateY(4px);
+}
+
+.project-card-character a:hover .bubble-character,
+.project-card-character a:focus-visible .bubble-character,
+.project-card-logo a:hover .bubble-logo,
+.project-card-logo a:focus-visible .bubble-logo {
+  opacity: 0;
+}
+
+.project-card-character a:hover .bubble-hover-copy,
+.project-card-character a:focus-visible .bubble-hover-copy,
+.project-card-logo a:hover .bubble-hover-copy,
+.project-card-logo a:focus-visible .bubble-hover-copy {
+  opacity: 1;
+}
+
+.project-card .bubble-logo {
+  transition: opacity 220ms ease;
 }
 
 .project-card img,
@@ -255,8 +489,8 @@ a {
 }
 
 .project-card h3 {
-  margin: 19px 0 0;
-  font-size: 28pt;
+  margin: 0;
+  font-size: 16pt;
   line-height: 1.08;
   letter-spacing: 0;
   font-weight: 600;
@@ -269,9 +503,9 @@ a {
 .project-status {
   margin: 12px 0 0;
   color: #555555;
-  font-size: 24pt;
-  font-weight: 400;
-  line-height: 1.08;
+  font-size: 14pt;
+  font-weight: 500;
+  line-height: 1.15;
 }
 
 .project-card a:hover h3,
@@ -679,7 +913,7 @@ a {
 .site-footer {
   padding: 48px 24px 32px;
   color: #555555;
-  font-size: 12pt;
+  font-size: 10pt;
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
@@ -733,22 +967,34 @@ a {
   border: 0;
 }
 
+@media (max-width: 900px) {
+  .projects {
+    width: min(544px, calc(100% - 48px));
+    grid-template-columns: repeat(2, minmax(0, 248px));
+    transform: translateY(40px);
+  }
+
+  .project-card:last-of-type {
+    grid-column: 1 / -1;
+  }
+}
+
 @media (max-width: 700px) {
   .site-header {
-    align-items: center;
-    flex-direction: row;
-    gap: 24px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
     padding: 20px;
   }
 
   .site-nav {
-    width: auto;
-    justify-content: flex-end;
-    gap: 16px;
+    width: 100%;
+    justify-content: space-between;
+    gap: 12px;
   }
 
   .hero {
-    padding-top: 72px;
+    padding: 52px 20px 28px;
   }
 
   .hero-inner {
@@ -827,9 +1073,15 @@ a {
 
   .projects {
     grid-template-columns: 1fr;
-    gap: 42px;
-    margin-top: 96px;
+    column-gap: 24px;
+    row-gap: 64px;
+    margin-top: 32px;
     margin-bottom: 88px;
+    transform: translateY(26px);
+  }
+
+  .project-card:last-of-type {
+    grid-column: auto;
   }
 
   .back-to-top {
@@ -840,11 +1092,15 @@ a {
 
 @media (max-width: 420px) {
   .site-header {
-    font-size: 14px;
+    font-size: 18pt;
   }
 
   .brand {
     white-space: normal;
+  }
+
+  .site-nav {
+    flex-wrap: wrap;
   }
 
   .hero,
@@ -867,5 +1123,12 @@ a {
 
   .button {
     width: 174px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-card:hover .circle-label,
+  .project-card:focus-within .circle-label {
+    animation: none;
   }
 }

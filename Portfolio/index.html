@@ -7,10 +7,10 @@
     <title>Sarah Lefeuvre | Portfolio</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="home-page">
     <header class="site-header" id="top">
       <a class="brand" href="index.html" aria-label="Sarah Lefeuvre portfolio home">
-        Sarah Lefeuvre | Portfolio
+        Sarah Lefeuvre · Portfolio
       </a>
 
       <nav class="site-nav" aria-label="Main navigation">
@@ -24,43 +24,53 @@
     <main>
       <section class="hero" aria-labelledby="intro-title">
         <div class="hero-inner">
-          <h1 id="intro-title">Hi, I’m <strong>Sarah</strong> <span class="spinning-emoji" aria-hidden="true">🌸</span></h1>
+          <h1 id="intro-title">Hi, I’m <strong>Sarah</strong> <span class="teddy-wave-emoji" aria-hidden="true">🧸</span></h1>
           <p>
             Designing digital experiences that feel effortless.
             <strong>Product Designer (UX/UI)</strong> focused on creating intuitive
             solutions for real people.
           </p>
 
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button button-primary" href="#projects">Projects</a>
-            <a class="button button-secondary" href="contact.html">Connect</a>
-          </div>
         </div>
       </section>
 
       <section class="projects" id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title" class="visually-hidden">Featured projects</h2>
 
-        <article class="project-card">
+        <article class="project-card project-card-character project-card-bird">
           <a href="projects/lory.html" aria-label="View Lory project">
-            <img class="project-image-lory" src="assets/lory-project.png" alt="Mobile screens from the Lory language-learning app" />
-            <h3><strong>Lory</strong> — Redesigning a language-learning app for 20K+ users</h3>
+            <img class="bubble-character bubble-character-bird" src="assets/lory-bird.png" alt="Friendly purple bird character" />
+            <p class="bubble-hover-copy">Lory: redesigning an iOS language-learning app used by 20K+ learners</p>
           </a>
+          <svg class="circle-label" viewBox="0 0 280 300" aria-hidden="true">
+            <path class="bubble-outline" d="M 29 210.2 A 140.5 140.5 0 1 1 251 210.2" />
+            <path id="lory-label-curve" d="M 9 185 A 145 145 0 0 0 271 185" />
+            <text><textPath href="#lory-label-curve" startOffset="50%">Lory · language-learning app</textPath></text>
+          </svg>
         </article>
 
-        <article class="project-card">
+        <article class="project-card project-card-character project-card-poppi">
           <a href="projects/poppi.html" aria-label="View Poppi project">
-            <img src="assets/poppi-project.png" alt="Mobile screens from the Poppi movie discovery app" />
-            <h3><strong>Poppi</strong> — Designing a movie discovery app that reduces decision fatigue</h3>
+            <img class="bubble-character bubble-character-poppi" src="assets/poppi-bucket.png" alt="Smiling popcorn bucket character" />
+            <p class="bubble-hover-copy">Poppi: reducing decision fatigue in movie discovery</p>
           </a>
+          <svg class="circle-label" viewBox="0 0 280 300" aria-hidden="true">
+            <path class="bubble-outline" d="M 34.9 217.3 A 140.5 140.5 0 1 1 245.1 217.3" />
+            <path id="poppi-label-curve" d="M 9 185 A 145 145 0 0 0 271 185" />
+            <text><textPath href="#poppi-label-curve" startOffset="50%">Poppi · movie-picking app</textPath></text>
+          </svg>
         </article>
 
-        <article class="project-card">
+        <article class="project-card project-card-logo">
           <a href="projects/lingraft.html" aria-label="View Lingraft project">
-            <img class="project-image-lingraft" src="assets/lingraft-project.png" alt="Mobile screens from the Lingraft language-learning app" />
-            <h3><strong>Lingraft</strong> — Designing a language-learning app built for focused study</h3>
-            <p class="project-status">⏱️ Coming Soon</p>
+            <img class="bubble-logo" src="assets/lingraft-logo.png" alt="Lingraft logo" />
+            <p class="bubble-hover-copy">Lingraft: building an all-in-one language-learning tool that helps users stay focused</p>
           </a>
+          <svg class="circle-label" viewBox="0 0 280 300" aria-hidden="true">
+            <path class="bubble-outline" d="M 22.8 201.5 A 140.5 140.5 0 1 1 257.2 201.5" />
+            <path id="lingraft-label-curve" d="M 9 185 A 145 145 0 0 0 271 185" />
+            <text><textPath href="#lingraft-label-curve" startOffset="50%">Lingraft · language-learning app</textPath></text>
+          </svg>
         </article>
       </section>
     </main>
@@ -69,8 +79,8 @@
       <span aria-hidden="true"></span>
     </button>
 
-    <footer class="site-footer">Designed by Sarah Lefeuvre, 2026</footer>
+    <footer class="site-footer">Sarah Lefeuvre, 2026</footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=3"></script>
   </body>
 </html>
