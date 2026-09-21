@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <title>Sarah Lefeuvre | Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pixel-operator" />
+    <link rel="stylesheet" href="styles.css?v=117" />
   </head>
   <body class="home-page">
     <header class="site-header" id="top">
@@ -30,49 +31,77 @@
             <strong>Product Designer (UX/UI)</strong> focused on creating intuitive
             solutions for real people.
           </p>
-
         </div>
       </section>
 
-      <section class="projects" id="projects" aria-labelledby="projects-title">
+      <p class="selected-work-label">01 — Selected work</p>
+      <section class="projects card-layout" id="projects" aria-labelledby="projects-title">
         <h2 id="projects-title" class="visually-hidden">Featured projects</h2>
 
-        <article class="project-card project-card-character project-card-bird">
-          <a href="projects/lory.html" aria-label="View Lory project">
-            <img class="bubble-character bubble-character-bird" src="assets/lory-bird.png" alt="Friendly purple bird character" />
-            <p class="bubble-hover-copy">Lory: redesigning an iOS language-learning app used by 20K+ learners</p>
+        <article class="project-card">
+          <a class="card-image-link card-image-link-lory" href="projects/lory.html?v=20260921" aria-label="View the Lory project image">
+            <img class="card-preview card-preview-lory" src="assets/lory-phone.png" alt="Lory language-learning app home screen" />
           </a>
-          <svg class="circle-label" viewBox="0 0 280 300" aria-hidden="true">
-            <path class="bubble-outline" d="M 29 210.2 A 140.5 140.5 0 1 1 251 210.2" />
-            <path id="lory-label-curve" d="M 9 185 A 145 145 0 0 0 271 185" />
-            <text><textPath href="#lory-label-curve" startOffset="50%">Lory · language-learning app</textPath></text>
-          </svg>
+          <div class="card-tags" aria-label="Project categories">
+            <span>Mobile App</span>
+          </div>
+          <a class="card-title-link" href="projects/lory.html?v=20260921">
+            <h3>Lory</h3>
+          </a>
+          <p class="card-description">Redesigning a language-learning app used by 20K+ learners.</p>
+          <a class="card-cta" href="projects/lory.html?v=20260921">Explore project</a>
         </article>
 
-        <article class="project-card project-card-character project-card-poppi">
-          <a href="projects/poppi.html" aria-label="View Poppi project">
-            <img class="bubble-character bubble-character-poppi" src="assets/poppi-bucket.png" alt="Smiling popcorn bucket character" />
-            <p class="bubble-hover-copy">Poppi: reducing decision fatigue in movie discovery</p>
+        <article class="project-card">
+          <a class="card-image-link card-image-link-poppi" href="projects/poppi.html" aria-label="View the Poppi project image">
+            <img class="card-preview card-preview-poppi" src="assets/poppi-phone.png" alt="Poppi movie-picking app welcome screen" />
           </a>
-          <svg class="circle-label" viewBox="0 0 280 300" aria-hidden="true">
-            <path class="bubble-outline" d="M 34.9 217.3 A 140.5 140.5 0 1 1 245.1 217.3" />
-            <path id="poppi-label-curve" d="M 9 185 A 145 145 0 0 0 271 185" />
-            <text><textPath href="#poppi-label-curve" startOffset="50%">Poppi · movie-picking app</textPath></text>
-          </svg>
+          <div class="card-tags" aria-label="Project categories">
+            <span>Mobile App</span>
+          </div>
+          <a class="card-title-link" href="projects/poppi.html">
+            <h3>Poppi</h3>
+          </a>
+          <p class="card-description">Reducing movie night decision fatigue.</p>
+          <a class="card-cta" href="projects/poppi.html">Explore project</a>
         </article>
 
-        <article class="project-card project-card-logo">
-          <a href="projects/lingraft.html" aria-label="View Lingraft project">
-            <img class="bubble-logo" src="assets/lingraft-logo.png" alt="Lingraft logo" />
-            <p class="bubble-hover-copy">Lingraft: building an all-in-one language-learning tool that helps users stay focused</p>
+        <article class="project-card">
+          <a class="card-image-link card-image-link-lingraft" href="projects/lingraft.html" aria-label="View the Lingraft project image">
+            <img class="card-preview card-preview-lingraft" src="assets/lingraft-word-screen.png" alt="Lingraft vocabulary word screen" />
           </a>
-          <svg class="circle-label" viewBox="0 0 280 300" aria-hidden="true">
-            <path class="bubble-outline" d="M 22.8 201.5 A 140.5 140.5 0 1 1 257.2 201.5" />
-            <path id="lingraft-label-curve" d="M 9 185 A 145 145 0 0 0 271 185" />
-            <text><textPath href="#lingraft-label-curve" startOffset="50%">Lingraft · language-learning app</textPath></text>
-          </svg>
+          <div class="card-tags" aria-label="Project categories">
+            <span>Mobile App</span>
+            <span class="card-tag-status">In Progress</span>
+          </div>
+          <a class="card-title-link" href="projects/lingraft.html">
+            <h3>Lingraft</h3>
+          </a>
+          <p class="card-description">Building an all-in-one language-learning experience.</p>
+          <a class="card-cta" href="projects/lingraft.html">View work in progress</a>
+        </article>
+
+        <article class="project-card" id="mif-card">
+          <a class="card-image-link card-image-link-mif" href="projects/mif.html" aria-label="View the mif project image">
+            <img class="card-preview card-preview-mif" src="assets/mif-mockup.png" alt="mif character-management platform interface" />
+          </a>
+          <div class="card-tags" aria-label="Project categories">
+            <span>Web Platform</span>
+            <span class="card-tag-status">In Progress</span>
+          </div>
+          <a class="card-title-link" href="projects/mif.html">
+            <h3>mif</h3>
+          </a>
+          <p class="card-description">Designing a home for text-based role-playing.</p>
+          <a class="card-cta" href="projects/mif.html">View work in progress</a>
         </article>
       </section>
+      <p class="selected-work-label next-section-label">02 — Like what you see?</p>
+      <div class="home-contact-copy">
+        <p>Maybe we should make something together.</p>
+        <p>I'm currently open to Product Design / UX/UI opportunities (remote ; based in Barcelona, Spain).</p>
+        <a class="home-contact-cta" href="contact.html"><span>Get in touch</span> ↗</a>
+      </div>
     </main>
 
     <button class="back-to-top" type="button" aria-label="Back to top">
@@ -81,6 +110,6 @@
 
     <footer class="site-footer">Sarah Lefeuvre, 2026</footer>
 
-    <script src="script.js?v=3"></script>
+    <script src="script.js?v=5"></script>
   </body>
 </html>

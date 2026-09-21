@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <title>Lory | Sarah Lefeuvre</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pixel-operator" />
+    <link rel="stylesheet" href="../styles.css?v=160" />
   </head>
-  <body>
+  <body class="project-page-body lory-page-body">
     <header class="site-header" id="top">
       <a class="brand" href="../index.html" aria-label="Sarah Lefeuvre portfolio home">
         Sarah Lefeuvre · Portfolio
@@ -25,11 +26,11 @@
       <a class="case-back" href="../index.html#projects"><span aria-hidden="true">←</span><span>Back to all projects</span></a>
 
       <section class="case-hero" aria-labelledby="case-title">
-        <h1 id="case-title">Expanding a language-learning app beyond vocabulary</h1>
+        <h1 id="case-title">Expanding a <span class="sarah-highlight">language-learning</span> app beyond vocabulary</h1>
         <p>Redesigning Lory, an iOS language-learning app used by 20K+ learners</p>
       </section>
 
-      <img class="case-image case-placeholder-hero" src="../assets/lory-case-hero.png" alt="Lory app redesign screens shown on five iPhones" />
+      <img class="case-image case-placeholder-hero" src="../assets/lory-overview-mini-v2.png" alt="Lory onboarding, home, and skill map screens with the Lory bird mascot" />
 
       <ul class="case-tags" aria-label="Project details">
         <li>Real Product Redesign</li>
@@ -38,7 +39,7 @@
       </ul>
 
       <section class="case-section">
-        <h2>Overview</h2>
+        <h2>01 — Overview</h2>
         <div class="case-copy">
           <p>
             Lory is an existing iOS language-learning app designed to help users
@@ -55,10 +56,40 @@
         </div>
       </section>
 
-      <img class="case-image" src="../assets/lory-problem-frame.png" alt="Five learner pain points before the Lory redesign" />
-
       <section class="case-section">
-        <h2>The Problem</h2>
+        <h2>02 — The Problem</h2>
+        <section class="lory-problem-grid" aria-label="Five learner pain points before the Lory redesign">
+        <article class="lory-problem-card">
+          <span class="problem-number">01</span>
+          <div class="problem-icon problem-icon-language" aria-hidden="true">🇪🇸</div>
+          <h3>Motivated to learn</h3>
+          <p>Learners are excited to improve their Spanish skills.</p>
+        </article>
+        <article class="lory-problem-card">
+          <span class="problem-number">02</span>
+          <div class="problem-icon problem-icon-tools" aria-hidden="true"><span>Vocabulary app</span><b>+</b><span>Grammar website</span></div>
+          <h3>Using multiple tools</h3>
+          <p>They rely on different apps and websites for vocabulary and grammar.</p>
+        </article>
+        <article class="lory-problem-card">
+          <span class="problem-number">03</span>
+          <div class="problem-icon problem-icon-fragmented" aria-hidden="true">😵‍💫</div>
+          <h3>Fragmented experience</h3>
+          <p>Switching between platforms creates confusion and breaks the learning flow.</p>
+        </article>
+        <article class="lory-problem-card">
+          <span class="problem-number">04</span>
+          <div class="problem-icon problem-icon-chart" aria-hidden="true"><svg class="decline-arrow" viewBox="0 0 80 48"><path d="M5 7 C28 7 47 17 69 35"/><path d="M59 34 L70 36 L68 25"/></svg><span></span><span></span><span></span><span></span></div>
+          <h3>Losing motivation</h3>
+          <p>The lack of structure and progress visibility makes it hard to stay consistent.</p>
+        </article>
+        <article class="lory-problem-card">
+          <span class="problem-number">05</span>
+          <div class="problem-icon problem-icon-heart" aria-hidden="true">💔</div>
+          <h3>Stopping too soon</h3>
+          <p>Frustrated, many learners give up before reaching their goals.</p>
+        </article>
+        </section>
         <div class="case-copy">
           <p>
             Lory originally focused on vocabulary acquisition through flashcards,
@@ -87,10 +118,47 @@
         </div>
       </section>
 
-      <img class="case-image" src="../assets/lory-problem-table.png" alt="Comparison table of language-learning apps and feature ratings" />
-
       <section class="case-section">
-        <h2>Research</h2>
+        <h2>03 — Research</h2>
+        <div class="lory-table-wrap">
+        <table class="lory-research-table">
+          <caption class="visually-hidden">Comparison of vocabulary, grammar, and gamification features across language-learning apps</caption>
+          <thead>
+            <tr>
+              <th scope="col">App</th>
+              <th scope="col">Vocabulary</th>
+              <th scope="col">Grammar</th>
+              <th scope="col">Gamification</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><img src="../assets/logo-duolingo.png" alt="" /><span>Duolingo</span></th>
+              <td><span class="rating" role="img" aria-label="5 out of 5"><span class="rating-filled">★★★★★</span></span></td>
+              <td><span class="rating" role="img" aria-label="3 out of 5"><span class="rating-filled">★★★</span><span class="rating-empty">★★</span></span></td>
+              <td><span class="rating" role="img" aria-label="5 out of 5"><span class="rating-filled">★★★★★</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="../assets/logo-anki.png" alt="" /><span>Anki</span></th>
+              <td><span class="rating" role="img" aria-label="5 out of 5"><span class="rating-filled">★★★★★</span></span></td>
+              <td><span class="rating" role="img" aria-label="0 out of 5"><span class="rating-empty">★★★★★</span></span></td>
+              <td><span class="rating" role="img" aria-label="0 out of 5"><span class="rating-empty">★★★★★</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="../assets/logo-kwiziq.png" alt="" /><span>Kwiziq</span></th>
+              <td><span class="rating" role="img" aria-label="0 out of 5"><span class="rating-empty">★★★★★</span></span></td>
+              <td><span class="rating" role="img" aria-label="5 out of 5"><span class="rating-filled">★★★★★</span></span></td>
+              <td><span class="rating" role="img" aria-label="1 out of 5"><span class="rating-filled">★</span><span class="rating-empty">★★★★</span></span></td>
+            </tr>
+            <tr>
+              <th scope="row"><img src="../assets/logo-lory.png" alt="" /><span>Lory</span></th>
+              <td><span class="rating" role="img" aria-label="5 out of 5"><span class="rating-filled">★★★★★</span></span></td>
+              <td><span class="rating" role="img" aria-label="5 out of 5"><span class="rating-filled">★★★★★</span></span></td>
+              <td><span class="rating" role="img" aria-label="3 out of 5"><span class="rating-filled">★★★</span><span class="rating-empty">★★</span></span></td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
         <div class="case-copy">
           <p>
             To better understand learner expectations, I gathered feedback from language
@@ -113,10 +181,28 @@
         </div>
       </section>
 
-      <img class="case-image case-image-solution" src="../assets/lory-solution.png" alt="Three solution pillars for Lory: vocabulary, grammar, and motivation" />
-
       <section class="case-section">
-        <h2>Solution</h2>
+        <h2>04 — Solution</h2>
+        <section class="lory-solution-grid" aria-label="Three solution pillars for Lory">
+        <article class="lory-solution-card">
+          <span class="solution-number">01</span>
+          <h3>Vocabulary</h3>
+          <p>Spaced repetition through flashcards</p>
+          <img src="../assets/lory-solution-vocabulary-v2.png" alt="Lory vocabulary list and vocabulary exercise screens" />
+        </article>
+        <article class="lory-solution-card">
+          <span class="solution-number">02</span>
+          <h3>Grammar</h3>
+          <p>Short lessons followed by exercises</p>
+          <img src="../assets/lory-solution-grammar-v2.png" alt="Lory grammar lesson and grammar exercise screens" />
+        </article>
+        <article class="lory-solution-card">
+          <span class="solution-number">03</span>
+          <h3>Motivation</h3>
+          <p>Skill Map, XP and Streak to encourage consistency</p>
+          <img src="../assets/lory-solution-motivation-v2.png" alt="Lory skill map and learning reward screens" />
+        </article>
+        </section>
         <div class="case-copy">
           <p>
             Based on my research, I focused on three key pillars that would guide the
@@ -141,11 +227,10 @@
         </div>
       </section>
 
-      <img class="case-image" src="../assets/lory-process.png" alt="Lory user flow, wireframes, and high-fidelity design process screens" />
-      <p class="case-caption case-caption-process">Mind map, low-fidelity wireframes, high-fidelity wireframes</p>
-
       <section class="case-section">
-        <h2>Design Process</h2>
+        <h2>05 — Design Process</h2>
+        <img class="case-image" src="../assets/lory-process-v4.png" alt="Lory low-fidelity and high-fidelity exercise and level-result screens" />
+        <p class="case-caption case-caption-process">From low-fidelity wireframes to high-fidelity wireframes</p>
         <div class="case-copy">
           <p>
             I began by mapping the user journey and identifying the key touchpoints
@@ -169,37 +254,48 @@
         </div>
       </section>
 
-      <img class="case-image" src="../assets/lory-final-buttons.png" alt="Button component system for the Lory final design" />
-      <p class="case-caption case-caption-medium">Working with pre-existing components and creating new ones</p>
-
       <section class="case-section">
-        <h2>Final Design</h2>
+        <h2>06 — Final Design</h2>
+        <img class="case-image" src="../assets/lory-final-design-v2.png" alt="Final Lory onboarding, grammar lesson, vocabulary exercise, mistake review, and grammar library screens" />
         <div class="case-copy">
           <p>
-            I began by mapping the user journey and identifying the key touchpoints
-            involved in a typical learning session.
-          </p>
-          <p>
-            This allowed me to create user flows connecting grammar lessons, vocabulary
-            reviews, and progression tracking into a cohesive experience.
-          </p>
-          <p>
-            Once the overall structure was defined, I moved into low-fidelity wireframes
-            to explore navigation patterns, content hierarchy, and feature placement.
-            After validating the foundations of the experience, I developed high-fidelity
-            interfaces and a consistent visual language that reflected the product's
-            educational and approachable nature.
-          </p>
-          <p>
-            Throughout the process, my primary objective was to keep the experience simple
-            and intuitive despite the addition of several new learning systems.
+            The final redesign transforms Lory from a vocabulary-focused app into a more complete
+            language-learning experience. Based on my research, I expanded the product beyond
+            flashcards by introducing structured grammar lessons, varied practice exercises, and a
+            gamified Skill Map that makes progress easy to follow. By bringing vocabulary, grammar,
+            and active practice into one place, the redesign aims to give learners a more cohesive
+            experience — without relying on multiple apps or platforms to support their learning.
           </p>
         </div>
       </section>
 
-      <img class="case-image case-image-rounded" src="../assets/lory-final-screens.png" alt="Lory final design screens shown on five iPhones" />
+      <section class="case-section">
+        <h2>07 — What's Next?</h2>
+        <div class="case-copy">
+          <p>
+            The redesign has been shared with Lory’s founder, with implementation planned for a
+            future release.
+          </p>
+        </div>
+      </section>
+
+      <div class="next-project-divider" aria-hidden="true"></div>
+
+      <a class="next-project-card" href="poppi.html" aria-label="Explore the Poppi project">
+        <span class="next-project-copy">
+          <span class="next-project-label">Next project</span>
+          <strong>Poppi</strong>
+          <span class="next-project-description">Reducing movie night decision fatigue.</span>
+          <span class="next-project-link">Explore project <span aria-hidden="true">↗</span></span>
+        </span>
+        <span class="next-project-preview">
+          <img src="../assets/poppi-phone.png" alt="Poppi movie-picking app welcome screen" />
+        </span>
+      </a>
+
     </main>
 
     <footer class="site-footer">Sarah Lefeuvre, 2026</footer>
+    <script src="../script.js?v=5"></script>
   </body>
 </html>

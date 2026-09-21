@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" href="assets/favicon.png">
     <title>About | Sarah Lefeuvre</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pixel-operator" />
+    <link rel="stylesheet" href="styles.css?v=83" />
   </head>
-  <body>
+  <body class="about-page-body">
     <header class="site-header" id="top">
       <a class="brand" href="index.html" aria-label="Sarah Lefeuvre portfolio home">
         Sarah Lefeuvre · Portfolio
@@ -24,70 +25,69 @@
     <main class="about-page">
       <section class="about-layout" aria-labelledby="about-title">
         <div class="about-copy">
-          <h1 id="about-title">More about me <span class="twitch-emoji" aria-hidden="true">🌷</span></h1>
+          <div class="about-heading-row">
+            <h1 id="about-title"><span class="about-heading-rest">A little </span><span class="sarah-highlight">more</span><span class="about-heading-rest"> about me</span> <span class="croissant-emoji" aria-hidden="true">🥐</span></h1>
+          </div>
 
-          <p class="location-pill">Trignac — France</p>
+          <p class="about-tagline">Driven by <strong>curiosity</strong>, guided by <strong>empathy</strong>.</p>
+          <h2 class="about-section-label">01 — My Story</h2>
 
-          <h2>My journey</h2>
+          <div class="about-intro-card">
+            <div class="about-text">
+              <p>
+                Hi, I'm Sarah Lefeuvre — a UX/UI Designer with a background in beauty
+                and a big love for creative, human-centered projects.
+              </p>
 
-          <div class="about-text">
-            <p>Hi, I'm Sarah Lefeuvre — nice to meet you!</p>
+              <p>
+                My journey into design started unexpectedly after a conversation with a
+                designer at a party sparked my curiosity. The blend of empathy,
+                problem-solving and creativity immediately felt like the perfect fit, and
+                I haven't looked back since.
+              </p>
 
-            <p>
-              My journey into UX/UI started unexpectedly after a conversation with
-              a designer sparked my curiosity. The blend of empathy, problem-solving,
-              and creativity immediately felt like the perfect fit, and I haven't
-              looked back since.
-            </p>
+              <p>
+                I'm now focused on creating intuitive and engaging digital experiences
+                that make people's lives easier — and a little brighter.
+              </p>
+            </div>
+          </div>
 
-            <p>
-              Before transitioning into design, I worked as a Beauty Advisor, where I
-              developed a strong appreciation for understanding people's needs and
-              creating positive experiences — skills that continue to shape my design
-              process today.
-            </p>
+          <h2 class="about-section-label about-details-label">02 — A few things that make me, me</h2>
+          <div class="about-intro-card">
+            <div class="about-text">
+              <p>
+                When I’m not on Figma, you’ll probably find me drawing, painting,
+                writing, or finding a new way to express my creativity. Curious at
+                heart, I find inspiration in exploring new places, ideas, and stories —
+                whether through travel or books.
+              </p>
+            </div>
+          </div>
 
-            <p>
-              I'm curious by nature and enjoy working on a wide variety of digital
-              products. What excites me most is the opportunity to understand people's
-              needs and transform complex challenges into simple, intuitive experiences.
-            </p>
+          <h2 class="about-section-label about-details-label">03 — Languages</h2>
+          <div class="about-intro-card">
+            <ul class="language-levels">
+              <li><span>French</span><span class="language-bubbles" role="img" aria-label="Native proficiency, 5 out of 5"><i></i><i></i><i></i><i></i><i></i></span></li>
+              <li><span>English</span><span class="language-bubbles" role="img" aria-label="Fluent proficiency, 5 out of 5"><i></i><i></i><i></i><i></i><i></i></span></li>
+              <li><span>Russian</span><span class="language-bubbles" role="img" aria-label="Upper-Intermediate proficiency, 3 out of 5"><i></i><i></i><i></i><i class="is-empty"></i><i class="is-empty"></i></span></li>
+              <li><span>Spanish</span><span class="language-bubbles" role="img" aria-label="Intermediate proficiency, 2 out of 5"><i></i><i></i><i class="is-empty"></i><i class="is-empty"></i><i class="is-empty"></i></span></li>
+            </ul>
           </div>
         </div>
 
         <div class="about-photo">
-          <img src="assets/about-photo.png" alt="Sarah standing in front of an ornate wooden doorway" />
+          <div class="about-photo-frame">
+            <img src="assets/about-photo-morocco.jpg" alt="Sarah standing in front of an ornate wooden doorway in Morocco" />
+          </div>
+          <p class="about-photo-label">On a trip to Morocco, 26'</p>
         </div>
 
-        <div class="about-card-row">
-          <section class="about-card" aria-labelledby="interests-title">
-            <h2 id="interests-title">Interests</h2>
-            <p>
-              When I'm away from Figma, you'll probably find me learning a new language,
-              drawing, writing, or planning my next trip.
-            </p>
-          </section>
-
-          <section class="about-card" aria-labelledby="bonus-title">
-            <h2 id="bonus-title">Bonus</h2>
-            <p>
-              I've started designing my own websites at the age of 12, after discovering
-              text-based role-playing game. To this day, it remains one of my greatest
-              passions!
-            </p>
-          </section>
-
-          <section class="about-card" aria-labelledby="website-title">
-            <h2 id="website-title">About this website</h2>
-            <p>
-              I've designed this website on Figma and developed it with Codex. The
-              typography used across the whole website is Geist, and the header is VT323.
-            </p>
-          </section>
-        </div>
+        <p class="about-location-line">📍 Based in Trignac, France ; Barcelona, Spain</p>
       </section>
     </main>
 
     <footer class="site-footer">Sarah Lefeuvre, 2026</footer>
+    <script src="script.js?v=5"></script>
   </body>
 </html>
