@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <title>Poppi | Sarah Lefeuvre</title>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pixel-operator" />
-    <link rel="stylesheet" href="../styles.css?v=162" />
+    <link rel="stylesheet" href="../styles.css?v=169" />
   </head>
   <body class="project-page-body lory-page-body poppi-page-body">
     <header class="site-header" id="top">
@@ -30,120 +30,123 @@
         <p>Designing Poppi, a movie discovery app built to end endless browsing</p>
       </section>
 
-      <img class="case-image case-placeholder-hero case-image-rounded-small" src="../assets/poppi-cover-large.png" alt="Overview screens from the Poppi movie discovery app" />
+      <img class="case-image case-placeholder-hero case-image-rounded-small" src="../assets/poppi-hero-v2.png" alt="Poppi onboarding, favorite-movie selection, and personalized movie recommendation screens" />
 
       <ul class="case-tags" aria-label="Project details">
         <li>Product Design</li>
         <li>Mobile App</li>
-        <li>Movie Discovery</li>
+        <li>6-Week Project</li>
       </ul>
 
-      <section class="case-section">
+      <section class="case-section overview-with-details">
         <h2>01 — Overview</h2>
+        <table class="project-details-table" aria-label="Poppi project details">
+          <tbody>
+            <tr>
+              <th scope="row">Role</th>
+              <td>UX/UI Designer</td>
+            </tr>
+            <tr>
+              <th scope="row">Tools</th>
+              <td>Figma, Codex, GitHub</td>
+            </tr>
+            <tr>
+              <th scope="row">Status</th>
+              <td>Functional MVP – ongoing</td>
+            </tr>
+          </tbody>
+        </table>
         <div class="case-copy">
-          <p>
-            Poppi is a movie discovery concept designed to make choosing what to watch
-            feel simpler, faster, and less overwhelming. Instead of asking users to browse
-            endless lists, the experience guides them toward recommendations based on
-            mood, comfort level, and viewing preferences.
-          </p>
-          <p>
-            The goal was to create a focused mobile experience that reduces hesitation
-            and helps users move from browsing to watching with more confidence.
-          </p>
+          <h3 class="case-secondary-heading">A more personal way to discover what to watch.</h3>
+          <p>Poppi is a mobile-first movie companion designed to make film discovery simpler, more personal, and less overwhelming.</p>
+          <p>Initially conceived as a small UI exploration, it evolved into a functional bilingual MVP combining conversational recommendations, personalized preferences, and personal movie collections.</p>
         </div>
       </section>
 
       <section class="case-section">
-        <h2>02 — The Problem</h2>
-        <img class="case-image" src="../assets/poppi-problem.png" alt="Poppi onboarding screens explaining recommendation preferences" />
+          <h2>02 — The Challenge</h2>
+        <img class="case-image" src="../assets/poppi-onboarding-v2.png" alt="Poppi onboarding screens for selecting genres, favorite movies, and recommendation preferences" />
+        <h3 class="case-secondary-heading">Finding a movie shouldn't feel like another task.</h3>
         <div class="case-copy">
-          <p>
-            Streaming platforms offer large catalogs, but more choice does not always
-            lead to better decisions. Users can spend too much time comparing options,
-            second-guessing recommendations, or abandoning the search entirely.
-          </p>
-          <p class="case-subheading">
-            The challenge was to design a discovery flow that helps users:
-          </p>
-          <ul class="case-spaced-list">
-            <li>Filter recommendations without feeling restricted.</li>
-            <li>Make decisions with fewer steps and less cognitive effort.</li>
-            <li>Feel confident that the suggested movie matches their current mood.</li>
-          </ul>
+          <p>Movie preferences are personal, but they aren't necessarily static. Someone might have favorite genres and recurring interests while still wanting to explore something different depending on their mood.</p>
+          <p>I wanted Poppi to provide relevant recommendations from the beginning, without making users feel restricted by their initial choices.</p>
+          <p class="case-question-intro">The question I asked myself was:</p>
+          <p class="case-question">How might we help people discover movies that truly match their tastes and current mood?</p>
         </div>
       </section>
 
       <section class="case-section">
-        <h2>03 — Research</h2>
-        <img class="case-image" src="../assets/poppi-style.png" alt="Poppi visual style exploration with inspiration, colors, typography, and mascot" />
-        <p class="case-caption case-caption-process">Gathering inspiration and building Poppi's visual identity</p>
+        <h2>03 — The Solution</h2>
         <div class="case-copy">
-          <p>
-            I explored common movie-selection behaviors, focusing on how people decide
-            what to watch alone or with others. The research highlighted a recurring
-            tension between wanting personalized suggestions and not wanting to answer
-            too many questions before getting results.
-          </p>
-          <p class="case-subheading"><strong>Key Insights</strong></p>
-          <ul class="case-spaced-list">
-            <li>Users often want recommendations that match their energy level and mood.</li>
-            <li>Too many filters can make the decision feel like more work.</li>
-            <li>Clear, opinionated suggestions can reduce browsing fatigue.</li>
-          </ul>
-          <p>These insights shaped a recommendation flow built around simple choices.</p>
+          <h3 class="case-secondary-heading">A movie companion that grows with your tastes.</h3>
+          <p>I designed Poppi around three complementary features, bringing movie discovery, personalization, and organization together in one approachable experience.</p>
+          <div class="poppi-solution-grid" aria-label="Three core Poppi features">
+            <article class="poppi-solution-card">
+              <svg class="poppi-feature-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 10h21a4 4 0 0 1 4 4v11a4 4 0 0 1-4 4H18l-7 6v-6H8a4 4 0 0 1-4-4V14a4 4 0 0 1 4-4Z"/><path d="M35 20h5a4 4 0 0 1 4 4v10a4 4 0 0 1-4 4h-2v5l-7-5h-8a4 4 0 0 1-4-4v-1"/></svg>
+              <span class="poppi-feature-number">01</span>
+              <h3>Conversational Discovery</h3>
+              <p>Explore recommendations through mood-based conversations.</p>
+            </article>
+            <article class="poppi-solution-card">
+              <svg class="poppi-feature-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 12h32M8 24h32M8 36h32"/><path d="M17 7v10M32 19v10M20 31v10"/></svg>
+              <span class="poppi-feature-number">02</span>
+              <h3>Personalized Experience</h3>
+              <p>Set preferences early and adjust them as tastes evolve.</p>
+            </article>
+            <article class="poppi-solution-card">
+              <svg class="poppi-feature-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M14 7h20a4 4 0 0 1 4 4v31L24 34 10 42V11a4 4 0 0 1 4-4Z"/></svg>
+              <span class="poppi-feature-number">03</span>
+              <h3>Movie Collections</h3>
+              <p>Save, organize, and revisit films that matter.</p>
+            </article>
+          </div>
+          <h3 class="case-secondary-heading case-after-cards">Looking Ahead</h3>
+          <p>My long-term vision is for Poppi to become an increasingly adaptive movie companion, using viewing history, favorites, and evolving preferences to provide more relevant recommendations over time — while keeping users in control of their experience.</p>
         </div>
       </section>
 
       <section class="case-section">
-        <h2>04 — Solution</h2>
-        <img class="case-image" src="../assets/poppi-solution.png" alt="Poppi solution screens showing dashboard, watch lists, and filters" />
+        <h2>04 — Design Process</h2>
+        <img class="case-image" src="../assets/poppi-design-system-v2.png" alt="Poppi UI system showing dialog bubbles, inputs, colors, typography, and navigation components" />
         <div class="case-copy">
-          <p>
-            I focused the experience around lightweight preference selection, clear
-            recommendation logic, and a playful visual identity that makes the app feel
-            approachable without adding friction.
-          </p>
-          <p>
-            <strong>1. Guided Choice</strong><br />
-            Help users express what they want through simple, low-effort questions.
-          </p>
-          <p>
-            <strong>2. Confidence</strong><br />
-            Present recommendations with enough context to support a quick decision.
-          </p>
-          <p>
-            <strong>3. Personality</strong><br />
-            Use a friendly tone and memorable visual elements to make discovery feel fun.
-          </p>
+          <h3 class="case-secondary-heading">From a simple concept to a functional product.</h3>
+          <p>Poppi started as a personal UI exploration, but I soon realized that its limited functionality wasn't enough to fully address the original discovery challenge. I also wanted to push my skills further by designing a more complete, interconnected product.</p>
+          <p>I approached this evolution through three main stages:</p>
+
+          <h3 class="case-secondary-heading case-section-break">#1 · Designing the Experience</h3>
+          <p>I designed every screen in Figma before implementation, defining the visual identity, interface structure, and key user journeys.</p>
+          <p>As Poppi evolved, I explored how conversational discovery, personalization, and movie collections could work together as a coherent experience.</p>
+
+          <h3 class="case-secondary-heading case-section-break">#2 · Bringing the Designs to Life</h3>
+          <p>I used Codex as an AI-assisted development tool to turn my Figma designs into a functional web application.</p>
+          <p>My role was to define the intended interactions, communicate requirements, review the implemented experience, and guide refinements. Codex handled code implementation, debugging, and automated technical checks.</p>
+
+          <h3 class="case-secondary-heading case-section-break">#3 · Testing &amp; Iterating</h3>
+          <p>I manually tested navigation, movie interactions, localization, and responsive behavior, identifying issues that weren't always visible in Figma.</p>
+          <p>Testing Poppi on a physical smartphone revealed navigation spacing and virtual keyboard issues that hadn't surfaced during desktop checks. I refined the expected behavior, guided the implementation changes, and validated the updated interactions on my device.</p>
         </div>
       </section>
 
       <section class="case-section">
-        <h2>05 — Design Process</h2>
-        <img class="case-image" src="../assets/poppi-components.png" alt="Poppi interface component system for navigation, tags, buttons, icons, and cards" />
-        <p class="case-caption case-caption-process">Creating a tidy Design System with reusable components</p>
+        <h2>05 — Final Design</h2>
         <div class="case-copy">
-          <p>
-            I started by mapping the core decision-making flow, then explored how much
-            input the user should provide before seeing a useful recommendation.
-          </p>
-          <p>
-            The interface was shaped around a short onboarding sequence, a recommendation
-            screen, and a visual system that keeps the experience clear and direct.
-          </p>
+          <h3 class="case-secondary-heading">Less searching. More discovering.</h3>
+          <p>The final MVP brings together conversational recommendations, personalized discovery, and movie organization in a cohesive, mobile-first experience.</p>
+          <p>Rather than relying on a single way to find movies, Poppi gives users different ways to explore, express their preferences, and keep track of films that interest them.</p>
+          <img class="case-image case-inline-project-image" src="../assets/poppi-dashboard.png" alt="Poppi dashboard showing a personalized movie recommendation and related films" />
+          <img class="case-image case-inline-project-image" src="../assets/poppi-final-showcase.png" alt="Poppi Chat screens showing conversational, mood-based movie recommendations" />
+          <img class="case-image case-inline-project-image" src="../assets/poppi-personalized-preferences.png" alt="Poppi settings screens showing personalized movie preferences" />
+          <img class="case-image case-inline-project-image" src="../assets/poppi-movie-collections.png" alt="Poppi screens showing saved and watched movie collections" />
+          <h3 class="case-secondary-heading case-after-image">Bringing It All Together</h3>
+          <p>Poppi transforms the initial discovery concept into a functional movie companion, connecting exploration, personalization, and organization in one place.</p>
+          <p>The MVP establishes a foundation for a more intuitive and flexible experience, while future user testing will help determine how effectively it addresses the original discovery challenge.</p>
         </div>
       </section>
 
       <section class="case-section">
-        <h2>06 — Final Design</h2>
-        <img class="case-image" src="../assets/poppi-final-design.png" alt="Poppi final design screens shown across five iPhones" />
+        <h2>06 — What's Next?</h2>
         <div class="case-copy">
-          <p>
-            The final concept centers on reducing the time between opening the app and
-            finding a movie that feels right. The design keeps the number of decisions
-            small, the interaction flow focused, and the recommendations easy to act on.
-          </p>
+          <p>Poppi is still evolving. My next step is to conduct usability testing to identify friction points and refine the overall experience. In the longer term, I'd like to explore more adaptive recommendations informed by viewing history, favorites, and changing preferences — turning Poppi into an increasingly personal movie companion.</p>
         </div>
       </section>
 
