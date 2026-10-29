@@ -6,7 +6,7 @@
     <link rel="icon" type="image/png" href="../assets/favicon.png">
     <title>Poppi | Sarah Lefeuvre</title>
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/pixel-operator" />
-    <link rel="stylesheet" href="../styles.css?v=169" />
+    <link rel="stylesheet" href="../styles.css?v=173" />
   </head>
   <body class="project-page-body lory-page-body poppi-page-body">
     <header class="site-header" id="top">
@@ -104,7 +104,7 @@
 
       <section class="case-section">
         <h2>04 — Design Process</h2>
-        <img class="case-image" src="../assets/poppi-design-system-v2.png" alt="Poppi UI system showing dialog bubbles, inputs, colors, typography, and navigation components" />
+        <img class="case-image" src="../assets/poppi-design-system-final.png" alt="Poppi UI system showing dialog bubbles, inputs, colors, typography, and navigation components" />
         <div class="case-copy">
           <h3 class="case-secondary-heading">From a simple concept to a functional product.</h3>
           <p>Poppi started as a personal UI exploration, but I soon realized that its limited functionality wasn't enough to fully address the original discovery challenge. I also wanted to push my skills further by designing a more complete, interconnected product.</p>
@@ -113,6 +113,45 @@
           <h3 class="case-secondary-heading case-section-break">#1 · Designing the Experience</h3>
           <p>I designed every screen in Figma before implementation, defining the visual identity, interface structure, and key user journeys.</p>
           <p>As Poppi evolved, I explored how conversational discovery, personalization, and movie collections could work together as a coherent experience.</p>
+
+          <h3 class="case-secondary-heading case-section-break poppi-ux-decision-heading">Key UX Decision: two ways to discover</h3>
+          <p class="poppi-ux-decision-intro">Browsing or conversation? Why not both?</p>
+          <p>Rather than replacing traditional browsing with Poppi Chat, I designed two complementary discovery paths: one for exploring recommendations at a glance, and another for expressing a specific mood or preference.</p>
+          <p>The goal was to give users more flexibility without imposing a single way to discover movies.</p>
+
+          <div class="poppi-discovery-grid" aria-label="Two complementary ways to discover movies in Poppi">
+            <article class="poppi-discovery-card">
+              <div class="poppi-discovery-visual poppi-discovery-visual-browse" aria-hidden="true">
+                <span class="poppi-dashboard-crop poppi-dashboard-crop-top">
+                  <img src="../assets/poppi-ux-dashboard.png" alt="" />
+                </span>
+                <span class="poppi-dashboard-crop poppi-dashboard-crop-bottom">
+                  <img src="../assets/poppi-ux-dashboard.png" alt="" />
+                </span>
+              </div>
+              <div class="poppi-discovery-card-copy">
+                <h4>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                  Browse
+                </h4>
+                <p>Explore suggestions at a glance, without needing a specific idea.</p>
+              </div>
+            </article>
+
+            <article class="poppi-discovery-card">
+              <div class="poppi-discovery-visual poppi-discovery-visual-chat" aria-hidden="true">
+                <img src="../assets/poppi-ux-chat-dialog.png" alt="" />
+                <img src="../assets/poppi-ux-chat-recommendation.png" alt="" />
+              </div>
+              <div class="poppi-discovery-card-copy">
+                <h4>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-8l-5 4v-4H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/></svg>
+                  Chat
+                </h4>
+                <p>Express a mood or preference to explore a more specific direction.</p>
+              </div>
+            </article>
+          </div>
 
           <h3 class="case-secondary-heading case-section-break">#2 · Bringing the Designs to Life</h3>
           <p>I used Codex as an AI-assisted development tool to turn my Figma designs into a functional web application.</p>
