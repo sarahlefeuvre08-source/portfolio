@@ -2321,11 +2321,11 @@ a {
   }
 }
 
-/* Experimental four-card homepage layout. */
+/* Two-by-two homepage project grid. */
 .projects.card-layout {
   width: min(1094px, calc(100% - 64px));
   margin: 0 auto;
-  grid-template-columns: repeat(4, 248px);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 34px;
   align-items: stretch;
   transform: none;
@@ -2386,12 +2386,20 @@ a {
 
 .card-layout .project-card,
 .card-layout .project-card:last-of-type {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 1fr) 46px;
+  grid-template-areas:
+    "image title"
+    "image tags"
+    "image description"
+    "image cta";
+  column-gap: 22px;
+  row-gap: 12px;
+  align-items: start;
   grid-column: auto;
-  width: min(248px, 100%);
-  height: 440px;
+  width: 100%;
+  height: 280px;
   min-width: 0;
   padding: 16px;
   border: 1px solid transparent;
@@ -2434,10 +2442,15 @@ a {
   display: block;
 }
 
+.card-layout .card-title-link {
+  grid-area: title;
+}
+
 .card-layout .project-card .card-image-link {
   position: relative;
-  flex: 0 0 180px;
-  height: 180px;
+  grid-area: image;
+  width: 100%;
+  height: 100%;
   border-radius: 2px;
   overflow: hidden;
   background: #ffffff;
@@ -2462,7 +2475,7 @@ a {
 .card-layout .project-card .card-preview {
   display: block;
   width: 100%;
-  height: 180px;
+  height: 100%;
   aspect-ratio: auto;
   border-radius: 2px;
   background: #ffffff;
@@ -2476,10 +2489,10 @@ a {
 .card-layout .project-card .card-preview-lingraft {
   position: absolute;
   right: 0;
-  bottom: -90px;
+  bottom: -105px;
   left: 0;
   width: auto;
-  height: 270px;
+  height: 360px;
   max-width: none;
   margin: auto;
   object-fit: contain;
@@ -2499,12 +2512,12 @@ a {
 
 .card-layout .project-card .card-preview-mif {
   position: absolute;
-  top: 16px;
+  top: 18px;
   right: auto;
   bottom: auto;
-  left: 18px;
+  left: 14px;
   width: auto;
-  height: 205px;
+  height: 268px;
   max-width: none;
   background: #F7DEE7;
   object-fit: contain;
@@ -2517,11 +2530,12 @@ a {
 }
 
 .card-tags {
+  grid-area: tags;
   display: flex;
   min-height: 24px;
   flex-wrap: wrap;
   gap: 6px;
-  margin-top: 16px;
+  margin-top: 0;
 }
 
 .card-tags span {
@@ -2545,7 +2559,7 @@ a {
 }
 
 .card-layout .project-card h3 {
-  margin: 16px 3px 12px;
+  margin: 2px 0 0;
   color: #473325;
   font-family: Geist, Arial, Helvetica, sans-serif;
   font-size: 14pt;
@@ -2557,8 +2571,9 @@ a {
 }
 
 .card-layout .project-card .card-description {
-  margin: 0 3px;
-  height: 70px;
+  grid-area: description;
+  margin: 0;
+  height: auto;
   color: #473325;
   font-family: Geist, Arial, Helvetica, sans-serif;
   font-size: 14pt;
@@ -2573,13 +2588,14 @@ a {
 }
 
 .card-layout .project-card .card-cta {
+  grid-area: cta;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   min-height: 46px;
   height: 46px;
   flex: 0 0 46px;
-  margin-top: auto;
+  margin-top: 0;
   padding: 10px 4px;
   border-radius: 4px;
   background: #B47B58;
@@ -2604,27 +2620,33 @@ a {
   .home-page .selected-work-label,
   .home-contact-copy,
   .projects.card-layout {
-    width: min(530px, calc(100% - 48px));
+    width: min(900px, calc(100% - 48px));
   }
 
-  .projects.card-layout {
-    grid-template-columns: repeat(2, 248px);
+  .card-layout .project-card,
+  .card-layout .project-card:last-of-type {
+    grid-template-columns: 170px minmax(0, 1fr);
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .home-page .selected-work-label,
   .home-contact-copy,
   .projects.card-layout {
-    width: min(248px, calc(100% - 40px));
+    width: min(650px, calc(100% - 48px));
   }
 
   .projects.card-layout {
-    grid-template-columns: minmax(0, 248px);
+    grid-template-columns: minmax(0, 1fr);
     gap: 34px;
     margin-top: 0;
     margin-bottom: 0;
     transform: none;
+  }
+
+  .card-layout .project-card,
+  .card-layout .project-card:last-of-type {
+    grid-template-columns: 220px minmax(0, 1fr);
   }
 
   .home-page .next-section-label {
@@ -2633,6 +2655,42 @@ a {
 
   .home-contact-copy {
     margin-bottom: 88px;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-page .selected-work-label,
+  .home-contact-copy,
+  .projects.card-layout {
+    width: min(360px, calc(100% - 40px));
+  }
+
+  .card-layout .project-card,
+  .card-layout .project-card:last-of-type {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 220px auto auto auto 46px;
+    grid-template-areas:
+      "image"
+      "title"
+      "tags"
+      "description"
+      "cta";
+    height: auto;
+    min-height: 460px;
+    row-gap: 12px;
+  }
+
+  .card-layout .project-card .card-preview-poppi,
+  .card-layout .project-card .card-preview-lory,
+  .card-layout .project-card .card-preview-lingraft {
+    bottom: -105px;
+    height: 350px;
+  }
+
+  .card-layout .project-card .card-preview-mif {
+    top: 14px;
+    left: 22px;
+    height: 250px;
   }
 }
 
