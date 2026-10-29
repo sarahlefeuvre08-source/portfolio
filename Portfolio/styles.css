@@ -2399,7 +2399,8 @@ a {
   align-items: start;
   grid-column: auto;
   width: 100%;
-  height: 280px;
+  height: auto;
+  min-height: 242px;
   min-width: 0;
   padding: 16px;
   border: 1px solid transparent;
@@ -2449,8 +2450,10 @@ a {
 .card-layout .project-card .card-image-link {
   position: relative;
   grid-area: image;
+  align-self: start;
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1;
   border-radius: 2px;
   overflow: hidden;
   background: #ffffff;
@@ -2489,10 +2492,10 @@ a {
 .card-layout .project-card .card-preview-lingraft {
   position: absolute;
   right: 0;
-  bottom: -105px;
+  bottom: -75%;
   left: 0;
   width: auto;
-  height: 360px;
+  height: 170%;
   max-width: none;
   margin: auto;
   object-fit: contain;
@@ -2512,13 +2515,14 @@ a {
 
 .card-layout .project-card .card-preview-mif {
   position: absolute;
-  top: 18px;
-  right: auto;
-  bottom: auto;
-  left: 14px;
+  top: auto;
+  right: 0;
+  bottom: -35%;
+  left: 0;
   width: auto;
-  height: 268px;
+  height: 130%;
   max-width: none;
+  margin: auto;
   background: #F7DEE7;
   object-fit: contain;
 }
@@ -2668,7 +2672,7 @@ a {
   .card-layout .project-card,
   .card-layout .project-card:last-of-type {
     grid-template-columns: minmax(0, 1fr);
-    grid-template-rows: 220px auto auto auto 46px;
+    grid-template-rows: auto auto auto auto 46px;
     grid-template-areas:
       "image"
       "title"
@@ -2676,21 +2680,8 @@ a {
       "description"
       "cta";
     height: auto;
-    min-height: 460px;
+    min-height: 0;
     row-gap: 12px;
-  }
-
-  .card-layout .project-card .card-preview-poppi,
-  .card-layout .project-card .card-preview-lory,
-  .card-layout .project-card .card-preview-lingraft {
-    bottom: -105px;
-    height: 350px;
-  }
-
-  .card-layout .project-card .card-preview-mif {
-    top: 14px;
-    left: 22px;
-    height: 250px;
   }
 }
 
